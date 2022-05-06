@@ -2,9 +2,9 @@
 
 Secure files in your repository. The name "cyg" was inspired by the [Cygnus constellation](https://en.wikipedia.org/wiki/Cygnus_(constellation)).
 
-## Usages
+## Usage
 
-**Coming very soon...**
+*Coming very soon...*
 
 ## Author
 
