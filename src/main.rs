@@ -1,3 +1,6 @@
+use clap::Parser;
+mod commands;
+
 fn main() {
-    println!("Hello, world!");
+    commands::Commands::parse();
 }
