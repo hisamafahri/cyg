@@ -7,7 +7,7 @@
 
 # cyg: Secure files in your repository
 
-Cyg will help you to secure files/folders in your repository directly using PGP encryption. The name "cyg" was inspired by the [Cygnus constellation](https://en.wikipedia.org/wiki/Cygnus_(constellation)).
+Cyg will help you to secure files in your repository directly using PGP encryption. The name "cyg" was inspired by the [Cygnus constellation](https://en.wikipedia.org/wiki/Cygnus_(constellation)).
 
 ## How It Works?
 
@@ -23,7 +23,7 @@ It should return the version installed in your system.
 
 ## Usage
 
-- Lock a file/folders
+- Lock a file
 
     ```bash
     cyg lock # or: cyg l
@@ -33,7 +33,7 @@ It should return the version installed in your system.
     # can decrypt it.
     ```
 
-- Unlock a file/folders
+- Unlock a file
 
     ```bash
     cyg unlock # or: cyg u
