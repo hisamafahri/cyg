@@ -14,10 +14,10 @@ fn lock() {
     let base_cmd = String::from("gpg");
     let args_cmd = [
         String::from("--output"),
-        String::from("locked.cyg"),
-        String::from("--symmetric"),
-        String::from("--cipher-algo"),
-        String::from("AES256"),
+        String::from("test.cyg"),
+        String::from("--encrypt"),
+        String::from("--recipient"),
+        String::from("me@hisamafahri.com"),
         String::from("test.txt"),
     ];
     let result = utils::cmd::run(&base_cmd, &args_cmd);
