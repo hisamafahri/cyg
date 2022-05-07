@@ -11,11 +11,12 @@ fn main() {
 }
 
 fn lock() {
-    let path = utils::prompt::input(&"Which file you want to secure? ");
+    let path = utils::prompt::input(&"Which file you want to lock?");
+    let result_path = format!("{}.cyg", path);
     let base_cmd = String::from("gpg");
     let args_cmd = [
         String::from("--output"),
-        String::from("test.cyg"),
+        String::from(result_path),
         String::from("--encrypt"),
         String::from("--recipient"),
         String::from("me@hisamafahri.com"),
