@@ -15,8 +15,8 @@ pub fn lock() {
         String::from(recipient),
         String::from(&path),
     ];
-    let result = utils::cmd::run(&base_cmd, &args_cmd);
-    println!("{:?}", result);
+    let lock_result = utils::cmd::run(&base_cmd, &args_cmd);
+    println!("{:?}", lock_result);
 
     let rm_result = fs::remove_file(&path);
     println!("{:?}", rm_result);
