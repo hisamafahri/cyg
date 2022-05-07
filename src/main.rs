@@ -11,6 +11,7 @@ fn main() {
 }
 
 fn lock() {
+    let path = utils::prompt::input(&"Which file you want to secure? ");
     let base_cmd = String::from("gpg");
     let args_cmd = [
         String::from("--output"),
@@ -18,7 +19,7 @@ fn lock() {
         String::from("--encrypt"),
         String::from("--recipient"),
         String::from("me@hisamafahri.com"),
-        String::from("test.txt"),
+        String::from(path),
     ];
     let result = utils::cmd::run(&base_cmd, &args_cmd);
     println!("{:?}", result)
