@@ -23,7 +23,25 @@ It should return the version installed in your system.
 
 ## Usage
 
-*Coming very soon...*
+- Lock a file/folders
+
+    ```bash
+    cyg lock # or: cyg l
+
+    # Then it will ask you which file you want to encrypt
+    # and which email (make sure pgp public key are available in your system)
+    # can decrypt it.
+    ```
+
+- Unlock a file/folders
+
+    ```bash
+    cyg unlock # or: cyg u
+
+    # As long as you have the private key of the email
+    # inputted from `cyg lock` command, you will have
+    # the access to unlock it.
+    ```
 
 ## Author
 
