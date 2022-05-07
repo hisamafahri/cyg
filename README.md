@@ -1,4 +1,11 @@
-## cyg
+<br/>
+<a href="https://github.com/hisamafahri/cyg" target="blank_">
+    <img height="100" alt="cyg" src="https://raw.githubusercontent.com/hisamafahri/cyg/encrypt/docs/assets/cyg-title.svg" />
+</a>
+<br/>
+
+
+# cyg
 
 Secure files in your repository. The name "cyg" was inspired by the [Cygnus constellation](https://en.wikipedia.org/wiki/Cygnus_(constellation)).
 
