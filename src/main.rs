@@ -1,6 +1,5 @@
 use clap::Parser;
 mod cmd;
-mod utils;
 
 mod lock;
 
