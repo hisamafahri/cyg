@@ -1,4 +1,5 @@
 use crate::utils;
+use std::fs;
 
 pub fn lock() {
     let path = utils::prompt::input(&"Which file you want to lock?");
@@ -12,8 +13,11 @@ pub fn lock() {
         String::from("--encrypt"),
         String::from("--recipient"),
         String::from(recipient),
-        String::from(path),
+        String::from(&path),
     ];
-    let result = utils::cmd::run(&base_cmd, &args_cmd);
-    println!("{:?}", result)
+    let lock_result = utils::cmd::run(&base_cmd, &args_cmd);
+    println!("{:?}", lock_result);
+
+    let rm_result = fs::remove_file(&path);
+    println!("{:?}", rm_result);
 }
