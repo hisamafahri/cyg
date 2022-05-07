@@ -1,6 +1,25 @@
-## cyg
+<br/>
+<a href="https://github.com/hisamafahri/cyg" target="blank_">
+    <img height="100" alt="cyg" src="https://raw.githubusercontent.com/hisamafahri/cyg/encrypt/docs/assets/cyg-title.svg" />
+</a>
+<br/>
 
-Secure files in your repository. The name "cyg" was inspired by the [Cygnus constellation](https://en.wikipedia.org/wiki/Cygnus_(constellation)).
+
+# cyg: Secure files in your repository
+
+Cyg will helps you to secure files in your repository. The name "cyg" was inspired by the [Cygnus constellation](https://en.wikipedia.org/wiki/Cygnus_(constellation)).
+
+## How It Works?
+
+The current version of this tools are wrapping the already existing and secure [GnuPG CLI](https://gnupg.org/).
+
+Make sure it already installed in your system by running:
+
+```bash
+gpg --version
+```
+
+It should return the version installed in your system.
 
 ## Usage
 
