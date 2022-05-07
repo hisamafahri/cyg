@@ -2,4 +2,4 @@
 .DS_Store
 docs/.DS_Store
 test.txt
-test.cyg
+*.cyg
