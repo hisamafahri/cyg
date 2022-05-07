@@ -5,9 +5,9 @@
 <br/>
 
 
-# cyg
+# cyg: Secure files in your repository
 
-Secure files in your repository. The name "cyg" was inspired by the [Cygnus constellation](https://en.wikipedia.org/wiki/Cygnus_(constellation)).
+Cyg will helps you to secure files in your repository. The name "cyg" was inspired by the [Cygnus constellation](https://en.wikipedia.org/wiki/Cygnus_(constellation)).
 
 ## How It Works?
 
@@ -16,7 +16,7 @@ The current version of this tools are wrapping the already existing and secure [
 Make sure it already installed in your system by running:
 
 ```bash
-  gpg --version
+gpg --version
 ```
 
 It should return the version installed in your system.
