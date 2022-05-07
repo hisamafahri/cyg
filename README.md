@@ -1,6 +1,6 @@
 <br/>
 <a href="https://github.com/hisamafahri/cyg" target="blank_">
-    <img height="100" alt="cyg" src="https://raw.githubusercontent.com/hisamafahri/cyg/encrypt/docs/assets/cyg-title.svg" />
+    <img height="100" alt="cyg" src="https://raw.githubusercontent.com/hisamafahri/cyg/main/docs/assets/cyg-title.svg" />
 </a>
 <br/>
 
