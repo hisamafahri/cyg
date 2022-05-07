@@ -7,11 +7,11 @@
 
 # cyg: Secure files in your repository
 
-Cyg will helps you to secure files in your repository. The name "cyg" was inspired by the [Cygnus constellation](https://en.wikipedia.org/wiki/Cygnus_(constellation)).
+Cyg will help you to secure files/folders in your repository directly using PGP encryption. The name "cyg" was inspired by the [Cygnus constellation](https://en.wikipedia.org/wiki/Cygnus_(constellation)).
 
 ## How It Works?
 
-The current version of this tools are wrapping the already existing and secure [GnuPG CLI](https://gnupg.org/).
+The current version of this tool is using the already existing and secure [GnuPG CLI](https://gnupg.org/).
 
 Make sure it already installed in your system by running:
 
