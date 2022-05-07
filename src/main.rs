@@ -11,10 +11,15 @@ fn main() {
 }
 
 fn lock() {
-    let base_cmd = String::from("ls");
-    let args_cmd = [String::from("-a")];
+    let base_cmd = String::from("gpg");
+    let args_cmd = [
+        String::from("--output"),
+        String::from("locked.cyg"),
+        String::from("--symmetric"),
+        String::from("--cipher-algo"),
+        String::from("AES256"),
+        String::from("test.txt"),
+    ];
     let result = utils::cmd::run(&base_cmd, &args_cmd);
     println!("{:?}", result)
 }
-
-// gpg --output encrypted.data --symmetric --cipher-algo AES256 un_encrypted.data
