@@ -4,7 +4,13 @@ use std::fs;
 pub fn unlock() {
     let path = utils::prompt::input(&"Which file you want to unlock?");
 
-    // TODO: Check if the extension is .cyg
+    let ext = &path[path.len() - 4..path.len()];
+
+    if ext != ".cyg" {
+        println!("error: not a valid .cyg file!");
+        return;
+    }
+
     let original_path = &path[0..path.len() - 4];
     let base_cmd = String::from("gpg");
     let args_cmd = [
