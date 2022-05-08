@@ -25,8 +25,8 @@ It should return the version installed in your system.
 
 - Initalize
 
-    ```
-        cyg init
+    ```bash
+    cyg init
     ```
 
 - Lock a file
