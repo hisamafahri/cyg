@@ -22,4 +22,8 @@ pub enum Arg {
     /// Unlock secured files
     #[clap(alias = "u")]
     Unlock,
+
+    /// Initialize cyg
+    #[clap(alias = "i")]
+    Init,
 }
