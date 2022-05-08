@@ -1,5 +1,8 @@
 /target
 .DS_Store
 docs/.DS_Store
+
+# Test files/folders
 test.txt
 *.cyg
+.cyg/
