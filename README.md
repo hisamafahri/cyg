@@ -23,10 +23,16 @@ It should return the version installed in your system.
 
 ## Usage
 
+- Initalize
+
+    ```
+        cyg init
+    ```
+
 - Lock a file
 
     ```bash
-    cyg lock # or: cyg l
+    cyg lock
 
     # Then it will ask you which file you want to encrypt
     # and which email (make sure pgp public key are available in your system)
@@ -36,7 +42,7 @@ It should return the version installed in your system.
 - Unlock a file
 
     ```bash
-    cyg unlock # or: cyg u
+    cyg unlock
 
     # As long as you have the private key of the email
     # inputted from `cyg lock` command, you will have
