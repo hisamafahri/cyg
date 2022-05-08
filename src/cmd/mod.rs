@@ -16,14 +16,11 @@ pub struct Cmd {
 #[derive(Subcommand)]
 pub enum Arg {
     /// Secure files
-    #[clap(alias = "l")]
     Lock,
 
     /// Unlock secured files
-    #[clap(alias = "u")]
     Unlock,
 
     /// Initialize cyg
-    #[clap(alias = "i")]
     Init,
 }
