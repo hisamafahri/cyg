@@ -1,22 +1,14 @@
-use std::{fs, process};
+use std::fs;
 
 use crate::utils;
 use crate::model;
 
 pub fn group() {
     utils::check::cyg();
-    let contents = utils::check::config();
+    let raw_config = utils::check::config();
+    let parsed_config = utils::config::parse(&raw_config);
 
-    // TODO: Separate parse functinos
-    let config_data: model::Config = match toml::from_str(&contents) {
-        Ok(d) => d,
-        Err(_) => {
-            println!("error: Unable to parse data from the configuration file");
-            process::exit(1);
-        }
-    };
-
-    let mut group_list = config_data.group;
+    let mut group_list = parsed_config.group;
 
     let group_name = utils::prompt::input(&"Your group name?");
 
@@ -27,7 +19,7 @@ pub fn group() {
             files: vec![],
         });
     let config = model::Config {
-        app: model::App {name: config_data.app.name},
+        app: model::App {name: parsed_config.app.name},
         group: group_list,
     };
 
