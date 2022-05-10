@@ -1,9 +1,11 @@
 use serde::{Deserialize, Serialize};
+use std::collections::BTreeMap;
 
 #[derive(Serialize, Deserialize, Debug)]
-pub struct Config {
+pub struct Config<'a> {
     pub app: App,
-    pub group: Option<Group>,
+    #[serde(borrow)]
+    pub group: BTreeMap<&'a str, Group>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]

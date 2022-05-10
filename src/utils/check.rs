@@ -1,4 +1,5 @@
 use std::path::Path;
+use std::{fs, process};
 
 pub fn cyg() {
     // TODO: Check if GPG cli is exist
@@ -20,3 +21,15 @@ Please run 'cyg init' to get started."
         }
     }
 }
+
+pub fn config() -> String {
+    let contents = match fs::read_to_string(".cyg/cyg.toml") {
+        Ok(c) => c,
+        Err(_) => {
+            println!("error: Error while reading the configuration file");
+            process::exit(1);
+        }
+    };
+
+    return contents;
+  }
