@@ -1,17 +1,8 @@
-use serde::Serialize;
 use std::{fs, io::ErrorKind};
 
+use crate::model;
+
 use crate::utils;
-
-#[derive(Serialize)]
-struct Config {
-    app: App,
-}
-
-#[derive(Serialize)]
-struct App {
-    name: String,
-}
 
 pub fn init() {
     // Create .cyg directory if not exist
@@ -30,8 +21,9 @@ pub fn init() {
 
     let app_name = utils::prompt::input(&"Your app name?");
 
-    let config = Config {
-        app: App { name: app_name },
+    let config = model::Config {
+        app: model::App { name: app_name },
+        group: None,
     };
 
     let toml = toml::to_string(&config).unwrap();
