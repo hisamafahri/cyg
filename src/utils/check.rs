@@ -10,14 +10,14 @@ pub fn cyg() {
                 "error: Cyg is not initialized in this repository!
 Please run 'cyg init' to get started."
             );
-            return;
+            process::exit(1);
         }
     }
     match Path::new(".cyg/cyg.toml").exists() {
         true => (),
         false => {
             println!("error: Configuration file could not been found!");
-            return;
+            process::exit(1);
         }
     }
 }

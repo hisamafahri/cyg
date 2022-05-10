@@ -1,4 +1,5 @@
 use std::collections::BTreeMap;
+use std::process;
 use std::{fs, io::ErrorKind};
 
 use crate::model;
@@ -16,7 +17,7 @@ pub fn init() {
             } else {
                 println!("error: {}", &err);
             }
-            return;
+            process::exit(1);
         }
     }
 

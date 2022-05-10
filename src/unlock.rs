@@ -1,5 +1,5 @@
 use crate::utils;
-use std::fs;
+use std::{fs, process};
 
 pub fn unlock() {
     let path = utils::prompt::input(&"Which file you want to unlock?");
@@ -8,7 +8,7 @@ pub fn unlock() {
 
     if ext != ".cyg" {
         println!("error: not a valid .cyg file!");
-        return;
+        process::exit(1);
     }
 
     let original_path = &path[0..path.len() - 4];
