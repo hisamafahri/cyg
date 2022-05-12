@@ -2,7 +2,7 @@ use crate::cmd;
 mod group;
 mod user;
 
-pub fn create(resource: &cmd::Resource) {
+pub fn create(resource: &cmd::CreateResource) {
     match resource.resource.as_str() {
         "group" => group::group(),
         "user" => user::user(),

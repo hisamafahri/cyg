@@ -25,11 +25,21 @@ pub enum Arg {
     Init,
 
     /// Create a new group or user to the configuration
-    Create(Resource),
+    Create(CreateResource),
+
+    /// Add file or existing user into groups
+    Add(AddResource)
 }
 
 #[derive(Args, Debug)]
-pub struct Resource {
+pub struct CreateResource {
     /// Choose between a 'group' or 'user'
+    pub resource: String,
+}
+
+
+#[derive(Args, Debug)]
+pub struct AddResource {
+    /// Choose between a 'user' or 'file'
     pub resource: String,
 }

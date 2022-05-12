@@ -4,6 +4,7 @@ mod model;
 mod utils;
 
 mod create;
+mod add;
 mod init;
 mod lock;
 mod unlock;
@@ -16,5 +17,6 @@ fn main() {
         cmd::Arg::Unlock => unlock::unlock(),
         cmd::Arg::Init => init::init(),
         cmd::Arg::Create(resource) => create::create(resource),
+        cmd::Arg::Add(resource) => add::add(resource),
     }
 }

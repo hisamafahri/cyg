@@ -1,7 +1,6 @@
 use std::fs;
 
-use crate::utils;
-use crate::model;
+use crate::{utils, model};
 
 pub fn group() {
     utils::check::cyg();
@@ -12,12 +11,7 @@ pub fn group() {
 
     let group_name = utils::prompt::input(&"Your group name?");
 
-    group_list.insert(
-        &group_name,
-        model::Group {
-            users: vec![],
-            files: vec![],
-        });
+    group_list.insert( &group_name, model::Group { users: vec![], files: vec![], });
     let config = model::Config {
         app: model::App {name: parsed_config.app.name},
         group: group_list,
